@@ -13,6 +13,8 @@ public interface ReadOnlyPerson {
     Phone getPhone();
     Email getEmail();
     Address getAddress();
+    int getSequenceNumber();
+
 
     /**
      * The returned TagList is a deep copy of the internal TagList,
@@ -29,7 +31,8 @@ public interface ReadOnlyPerson {
                 && other.getName().equals(this.getName()) // state checks here onwards
                 && other.getPhone().equals(this.getPhone())
                 && other.getEmail().equals(this.getEmail())
-                && other.getAddress().equals(this.getAddress()));
+                && other.getAddress().equals(this.getAddress())
+		&& other.getSequenceNumber().equals(this.getSequenceNumber());
     }
 
     /**
