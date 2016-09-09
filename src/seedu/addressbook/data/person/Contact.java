@@ -5,6 +5,14 @@ package seedu.addressbook.data.person;
  **/
 
  public class Contact	{
+     
+     public final String value;
+     private boolean isPrivate;
+
+     public Contact(String contactDetail, boolean isPrivate) throws IllegalValueException	{
+         this.isPrivate = isPrivate;
+	 this.value = contactDetail.trim();
+     }
 
 
  }
